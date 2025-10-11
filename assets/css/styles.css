@@ -1,0 +1,276 @@
+/* Minimal modern dark theme styles with responsive layout */
+:root {
+    --bg: #0f1113;
+    /* almost black charcoal */
+    --card: #151719;
+    /* card background */
+    --muted: #9aa0a6;
+    --accent: #cfcfcf;
+    --white: #ffffff;
+    --glass: rgba(255, 255, 255, 0.04);
+    font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+body.dark {
+    background: linear-gradient(180deg, var(--bg), #0b0c0d);
+    color: var(--accent);
+    margin: 0
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.brand {
+    color: var(--white);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.125rem
+}
+
+.nav a {
+    color: var(--muted);
+    text-decoration: none;
+    margin-left: 18px
+}
+
+.nav .btn-light {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: var(--accent)
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: 0;
+    color: var(--accent);
+    font-size: 1.2rem
+}
+
+.site-header {
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    position: sticky;
+    top: 0;
+    z-index: 60
+}
+
+.hero {
+    padding: 60px 0
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 28px;
+    align-items: center
+}
+
+.hero-text h1 {
+    font-size: 2.4rem;
+    margin: 0;
+    color: var(--white)
+}
+
+.tag {
+    color: var(--muted);
+    margin: 8px 0
+}
+
+.lead {
+    color: var(--muted);
+    max-width: 560px
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 10px;
+    background: var(--white);
+    color: #0b0c0d;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 8px
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    color: var(--accent)
+}
+
+.hero-media img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6)
+}
+
+.features {
+    display: flex;
+    gap: 18px;
+    margin-top: 40px
+}
+
+.feature {
+    background: var(--card);
+    padding: 18px;
+    border-radius: 12px;
+    flex: 1
+}
+
+.showcase h2 {
+    color: var(--white)
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 16px
+}
+
+.card {
+    background: var(--card);
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block
+}
+
+.card-body {
+    padding: 10px
+}
+
+.products-page .product-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px
+}
+
+.product-card {
+    display: flex;
+    gap: 16px;
+    background: var(--card);
+    padding: 12px;
+    border-radius: 10px
+}
+
+.product-card img {
+    width: 220px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px
+}
+
+.product-meta h2 {
+    color: var(--white);
+    margin: 0
+}
+
+.product-actions {
+    margin-top: 12px
+}
+
+.card.form-card {
+    padding: 16px
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 18px
+}
+
+.input,
+input,
+textarea,
+label {
+    display: block;
+    width: 100%
+}
+
+label {
+    color: var(--muted);
+    margin-bottom: 8px
+}
+
+input,
+textarea {
+    background: var(--glass);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 10px;
+    border-radius: 8px;
+    color: var(--accent)
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    margin-top: 8px
+}
+
+.site-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 18px 0;
+    margin-top: 40px
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+@media(max-width:900px) {
+    .hero-grid {
+        grid-template-columns: 1fr
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .products-page .product-list {
+        grid-template-columns: 1fr
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr
+    }
+
+    .nav {
+        display: none
+    }
+
+    .nav-toggle {
+        display: block
+    }
+}
