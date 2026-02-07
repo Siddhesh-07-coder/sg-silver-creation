@@ -1,61 +1,95 @@
-<!doctype html>
-<nav class="nav">
-<a href="/">Home</a>
-<a href="/about.html">About</a>
-<a href="/products.html">Products</a>
-<a href="/contact.html" class="btn btn-light">Contact</a>
-</nav>
-<button class="nav-toggle" aria-label="Open navigation">☰</button>
-</div>
-</header>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — SG Silver Creation</title>
+    <!-- Link to your CSS -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
 
-<main class="container contact-page">
-<h1>Contact & Enquiries</h1>
-<p class="lead">Use the form or message us directly on WhatsApp. For custom orders, mention size and quantity.</p>
+<body>
+    <!-- Header with navigation -->
+    <header class="site-header">
+        <nav class="nav">
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/products.html">Products</a>
+            <a href="/contact.html" class="btn btn-light">Contact</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Open navigation">☰</button>
+    </header>
 
+    <!-- Main content -->
+    <main class="container contact-page">
+        <h1>Contact & Enquiries</h1>
+        <p class="lead">Use the form or message us directly on WhatsApp. For custom orders, mention size and quantity.
+        </p>
 
-<div class="contact-grid">
-<form id="enquiry-form" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST" class="card form-card">
-<label>Name<input name="name" required></label>
-<label>Phone<input name="phone" required></label>
-<label>Email (optional)<input name="email" type="email"></label>
-<label>Product interested in<input name="product" id="product-input"></label>
-<label>Message<textarea name="message" rows="4"></textarea></label>
-<button class="btn" type="submit">Send Enquiry</button>
-</form>
+        <div class="contact-grid">
+            <!-- Contact form -->
+            <form id="enquiry-form" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST"
+                class="card form-card">
+                <label>
+                    Name
+                    <input name="name" required>
+                </label>
+                <label>
+                    Phone
+                    <input name="phone" required>
+                </label>
+                <label>
+                    Email (optional)
+                    <input name="email" type="email">
+                </label>
+                <label>
+                    Product interested in
+                    <input name="product" id="product-input">
+                </label>
+                <label>
+                    Message
+                    <textarea name="message" rows="4"></textarea>
+                </label>
+                <button class="btn" type="submit">Send Enquiry</button>
+            </form>
 
+            <!-- Quick contact card -->
+            <div class="card contact-right">
+                <h3>Quick Contact</h3>
+                <p>WhatsApp us directly:</p>
+                <!-- Replace YOUR_PHONE_NUMBER with international number without + or 00 -->
+                <a class="btn btn-whatsapp"
+                    href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi%20SG%20Silver%20Creation%2C%20I%20am%20interested%20in%20your%20products"
+                    target="_blank">Chat on WhatsApp</a>
 
-<div class="card contact-right">
-<h3>Quick Contact</h3>
-<p>WhatsApp us directly:</p>
-<!-- Replace YOUR_PHONE_NUMBER with international number without + or 00 (eg: 919812345678) -->
-<a class="btn btn-whatsapp" href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi%20SG%20Silver%20Creation%2C%20I%20am%20interested%20in%20your%20products" target="_blank">Chat on WhatsApp</a>
+                <h4>Visit / Pickup</h4>
+                <p>Pune, Maharashtra — Local pickup available. (Exact address on request.)</p>
 
+                <h4>Follow Us</h4>
+                <p>Instagram: <a href="#">@yourhandle</a></p>
+            </div>
+        </div>
+    </main>
 
-<h4>Visit / Pickup</h4>
-<p>Pune, Maharashtra — Local pickup available. (Exact address on request.)</p>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>© SG Silver Creation — <span id="copyright-year-4"></span></div>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/products.html">Products</a>
+                <a href="/contact.html">Contact</a>
+            </nav>
+        </div>
+    </footer>
 
-
-<h4>Follow Us</h4>
-<p>Instagram: <a href="#">@yourhandle</a></p>
-</div>
-</div>
-</main>
-
-
-<footer class="site-footer">
-<div class="container footer-inner">
-<div>© SG Silver Creation — <span id="copyright-year-4"></span></div>
-<nav>
-<a href="/">Home</a>
-<a href="/products.html">Products</a>
-<a href="/contact.html">Contact</a>
-</nav>
-</div>
-</footer>
-
-
-<script src="/assets/js/main.js"></script>
+    <!-- JS -->
+    <script src="/assets/js/main.js"></script>
+    <script>
+        // Optional: Auto update copyright year
+        document.getElementById('copyright-year-4').textContent = new Date().getFullYear();
+    </script>
 </body>
+
 </html>
